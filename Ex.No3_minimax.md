@@ -14,6 +14,7 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 8. Call the minimax function  and print the optimum value of Max player.
 9. Stop the program. 
 
+
 ### Program:
 ```import math
 
