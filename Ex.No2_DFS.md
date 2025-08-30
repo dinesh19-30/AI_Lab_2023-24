@@ -12,19 +12,30 @@ To write a python program to implement Depth first Search.
 6. Call the dfs function by passing arguments visited, graph and starting node.
 7. Stop the program.
 ### Program:
+```
+graph = {
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
+}
 
+visited = set()
 
+def dfs(visited, graph, node):
+    if node not in visited:
+        print(node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
-
-
-
-
-
-
-
-
+print("Following is the Depth-First Search")
+dfs(visited, graph, '5')
+```
 ### Output:
-
+<img width="1255" height="214" alt="image" src="https://github.com/user-attachments/assets/fd20d3db-1126-4b66-b937-23975774de45" />
 
 
 ### Result:
