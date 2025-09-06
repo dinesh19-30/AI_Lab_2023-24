@@ -40,27 +40,46 @@ Consider the following facts and represent them in predicate form: <br>
 Convert the facts in predicate form to clauses and then prove by resolution: “Steve likes BK301 course”<br> 
 
 ### Program:
-
-
+```
+likes(steve, X) :-
+easy_course(X).
+hard_course(science).
+easy_course(X) :-
+in_department(X, have_fun).
+in_department(bk301, have_fun).
+```
 
 ### Output:
+<img width="1918" height="923" alt="image" src="https://github.com/user-attachments/assets/1c6db53d-ec6b-4dfe-900a-fa051b8b8b9e" />
+
 
 ### Task 3:
 Consider the statement <br> 
 “This is a crime for an American to sell weapons to hostile nations. The Nano , enemy of America has some missiles and its missiles were sold it by Colonal West who is an American” <br> 
 Convert to Clause form and prove west is criminal by using Prolog.<br> 
 ### Program:
-crime(X):-american(X),weapon(Y),sells(X,Y,Z),
-    hostile(Z,X).
-sells(west,Y,nano):-owns(nano,Y),missile(Y).
-weapon(Y):-missile(Y).
-enemy(A,B):-hostile(B,A).
-enemy(nano,west).
-owns(nano,m1).
-missile(m1).
+```
+criminal(X):-
+american(X),
+weapon(Y),
+hostile(Z),
+sells(X,Y,Z).
+weapon(Y):-
+missile(Y).
+hostile(Z):-
+enemy(Z,america).
+sells(west,Y,nano):-
+missile(Y),
+owns(nano,Y).
+missile(m).
+owns(nano,m).
+enemy(nano,america).
 american(west).
+```
 
 ### Output:
+<img width="1919" height="925" alt="image" src="https://github.com/user-attachments/assets/d6764dc1-7f51-4f7e-b52d-034fb9fede1a" />
+
 
 ### Result:
 Thus the prolog programs were executed successfully and the answer of query was found.
