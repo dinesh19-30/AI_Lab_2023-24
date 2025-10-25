@@ -10,6 +10,7 @@ The aim of the code is to classify coral reef health status ("Healthy", "Stresse
 - Standardize duration and sample rate; pad audio as needed.
 - Handle loading errors by generating dummy data to prevent pipeline breaks.
 
+
 ### 2. Feature Extraction
 - Convert audio into **log-mel spectrograms** using Librosa.
 - Normalize spectrograms for neural network input.
